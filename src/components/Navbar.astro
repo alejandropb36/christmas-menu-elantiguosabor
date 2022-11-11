@@ -39,3 +39,14 @@ import '../assets/css/components/navbar.css';
         <div class="bx bx-menu" id="navbar__main-icon"></div>
     </div>
 </nav>
+
+<script>
+    const menu = document.querySelector('#navbar__main-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menu?.addEventListener('click', () => {
+        menu?.classList.toggle('bx-x');
+        navbar?.classList.toggle('navbar__open');
+    });
+
+</script>
