@@ -1,71 +1,81 @@
+@charset "UTF-8";
 /*
-  Reset creado por Eduardo Fierro - Github https://github.com/eduardofierropro
-  Repo - https://github.com/eduardofierropro/Reset-CSS
   Con este reset vamos a resolver:
     👉 Unificar el uso de Custom Properties
     👉 Problemas de box-model más generales
     👉 Problemas con imagenes, vídeos e iconos svg
     👉 Problemas con tipografías y etiquetas input en formularios
     👉 Unificar la tipografía de todas las etiquetas de una web
+
+    $color-primary: #D8483D;
+    $color-primary-dark: #A31F2C;
+
+    $color-secondary: #FC8E58;
+    $color-secondary-light: #F9B556;
+
+    $color-gray: gray;
+    $color-gray-light-1: #CCC;
+    $color-gray-light-2: #DDD;
+    $color-gray-dark: #444;
+
+    $color-black: #222;
+    $color-white:  #fff;
+
+    $font-small: 1.2rem;
+    $font-medium: 1.6rem;
+    $font-large: 3.2rem;
+    $font-xlarge: 4.8rem;
+
+    $font-family-primary: Helvetica, Arial, sans-serif;
+    $font-family-secondary: Verdana;
 */
-
-@use "../abstracts/variables" as variables;
-
 /* Aquí definimos las Custom properties */
 :root {
-  --black: #{variables.$color-black};
-  --white: #{variables.$color-black};
-
+  --negro: #393939;
   /* Tipografía */
-  --font-family-primary: #{variables.$font-family-primary};
-  --font-family-secondary: #{variables.$font-family-secondary};
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
 }
 
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --black: #{variables.$color-gray-light-1};
+    --negro: #ececec;
   }
 }
-
 /* Opcional */
 /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-/*@media (prefers-contrast: high) {
-  :root {
-  }
-}*/
-
 /* Opcional */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation: none !important;
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
     transition: none !important;
   }
 }
-
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   vertical-align: baseline;
 }
 
 /* Evitamos problemas con las imagenes */
-img,
-picture,
-video,
-iframe,
-figure {
+img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
   display: block;
   /* opcional */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   /* opcional */
-  object-position: center center;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 /* Reseteamos los enlaces para funcionar como cajas... */
@@ -75,6 +85,7 @@ a {
   color: inherit;
   font-size: inherit;
 }
+
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
@@ -91,63 +102,48 @@ html {
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-strong,
-blockquote,
-i,
-b,
-u,
-em {
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
   color: inherit;
 }
+
 /* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
 
 /* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
 ::selection {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--negro);
+  color: var(--blanco);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
-form,
-input,
-textarea,
-select,
-button,
-label {
+form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   background-color: transparent;
   color: inherit;
   display: block;
   /* opcional */
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 /* Reseteamos las tablas */
-table,
-tr,
-td {
+table, tr, td {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -158,21 +154,24 @@ svg {
   display: block;
   fill: currentColor;
 }
+
 /* (Probándolo, no usar en producción) En el caso de añadir una  */
 /* p svg{
-      display: inline;
-      width: initial;
-    } */
+  display: inline;
+  width: initial;
+} */
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--font-family-primary);
-  color: var(--black);
+  font-family: var(--tipo-principal);
+  color: var(--negro);
   /* opcional */
   line-height: 1.4em;
   /* opcional */
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   /* opcional */
   font-smooth: always;
   /* opcional */

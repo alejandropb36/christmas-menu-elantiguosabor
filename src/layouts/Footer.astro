@@ -1,6 +1,24 @@
 ---
-
+const year = new Date();
 ---
 
 <!-- Footer -->
-<footer>Footer</footer>
+<footer>
+  <div id="footer-content">
+    <p>
+      El antiguo sabor &copy; {year.getFullYear()}. by
+      <!-- <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="mr-1"/> -->
+      <a
+        rel="noreferrer"
+        href="https://www.linkedin.com/in/luis-alejandro-ponce-brizuela-22a994166/"
+        target="_blank">Alejandro Ponce</a
+      >
+    </p>
+  </div>
+</footer>
+
+<style lang="scss">
+  #footer-content {
+    padding: 18px;
+  }
+</style>

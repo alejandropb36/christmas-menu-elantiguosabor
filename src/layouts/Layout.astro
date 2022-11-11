@@ -1,5 +1,6 @@
 ---
-import '../assets/sass/main.scss';
+import '../assets/css/main.css';
+import Content from './Content.astro';
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 
@@ -12,18 +13,16 @@ const { title = 'Menu Navideño El Antiguo Sabor' } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-
 	</head>
 	<body>
         <Header />
-        <!-- Content -->
-		<main>
+		<Content>
             <slot />
-        </main>
+		</Content>
 		<Footer />
 	</body>
 </html>
