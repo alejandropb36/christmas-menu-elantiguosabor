@@ -11,3 +11,12 @@ nav {
     padding: 28px 12%;
     transition: all .50s ease;
 }
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo img {
+    width: 50px;
+}
