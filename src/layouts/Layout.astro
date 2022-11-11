@@ -1,28 +1,34 @@
 ---
-import '../assets/css/main.css';
-import Content from './Content.astro';
+import "../assets/css/main.css";
+import Content from "./Content.astro";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
-const { title = 'Menu Navideño El Antiguo Sabor' } = Astro.props;
+const { title = "Menu Navideño El Antiguo Sabor" } = Astro.props;
 ---
+
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-        <Header />
-		<Content>
-            <slot />
-		</Content>
-		<!-- <Footer /> -->
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <Header />
+    <Content>
+      <slot />
+    </Content>
+    <!-- <Footer /> -->
+  </body>
 </html>
