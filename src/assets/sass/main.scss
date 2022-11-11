@@ -1,20 +1,15 @@
-// Abstracts
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
 // Base
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@forward "base/animations";
+@forward "base/base";
+@forward "base/typography";
+@forward "base/utilities";
 
 // Components
 
-
 // Layout
-@import "layout/footer";
-@import "layout/header";
+@forward "layout/footer";
+@forward "layout/header";
 
 // Pages
-@import "pages/index";
+@forward "pages/index";
+
