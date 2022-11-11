@@ -6,14 +6,6 @@
     👉 Problemas con imagenes, vídeos e iconos svg
     👉 Problemas con tipografías y etiquetas input en formularios
     👉 Unificar la tipografía de todas las etiquetas de una web
-
-    --color-black: #222;
-    --color-white:  #fff;
-
-    --font-small: 1.2rem;
-    --font-medium: 1.6rem;
-    --font-large: 3.2rem;
-    --font-xlarge: 4.8rem;
 */
 /* Aquí definimos las Custom properties */
 :root {
