@@ -68,13 +68,14 @@ nav {
     display: none;
 }
 
-@media screen (max-width: 1280px) {
+@media (max-width: 1280px) {
     nav {
         padding: 14px 2%;
         transition: .2s;
     }
 
     .navbar a {
+        font-size: var(--font-size-xs);
         padding: 5px 0;
         margin: 0px 20px;
     }
