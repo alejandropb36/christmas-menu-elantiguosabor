@@ -1,4 +1,6 @@
 @charset "UTF-8";
+
+@import './variables.css';
 /*
   Con este reset vamos a resolver:
     👉 Unificar el uso de Custom Properties
@@ -7,34 +9,6 @@
     👉 Problemas con tipografías y etiquetas input en formularios
     👉 Unificar la tipografía de todas las etiquetas de una web
 */
-/* Aquí definimos las Custom properties */
-:root {
-  /* Colors */
-  --color-black: #393939;
-  --color-white: white;
-
-  --color-primary: #D8483D;
-  --color-primary-dark: #A31F2C;
-
-  --color-secondary: #FC8E58;
-  --color-secondary-light: #F9B556;
-
-  --color-gray: gray;
-  --color-gray-light-1: #CCC;
-  --color-gray-light-2: #DDD;
-  --color-gray-dark: #444;
-
-  /* Font Sizes */
-  --font-size-xs: 1.1rem;
-  --font-size-s: 1.2rem;
-  --font-size-m: 1.6rem;
-  --font-size-l: 3.2rem;
-  --font-size-xl: 4.8rem;
-
-  /* Typography */
-  --font-family-primary: Helvetica, Arial, sans-serif;
-  --font-family-secondary: Verdana;
-}
 
 /* Las adaptamos al modo oscuro */
 /* @media (prefers-color-scheme: dark) {
