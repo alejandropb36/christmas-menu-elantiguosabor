@@ -1,0 +1,27 @@
+---
+interface Props {
+  imageName: string;
+}
+
+const { imageName = "" } = Astro.props;
+---
+
+<section class="jumbotron">
+</section>
+
+<style define:vars={{ imageUrl: `url('${imageName}')` }}>
+  .jumbotron {
+    padding: 125px 1px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    background: var(--imageUrl);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(83, 82, 82, 0.6);
+  }
+</style>
