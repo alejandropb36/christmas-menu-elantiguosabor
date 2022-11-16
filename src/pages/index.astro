@@ -8,32 +8,45 @@ const year = '2022';
 
 <Layout title="Menu Navideño El Antiguo Sabor">
 	<Jumbotron imageName={Image} />
-	<section id="title">
+	<section id="main-title">
 		<h1>Menu Navideño {year}</h1>
 
 		<hr>
 	</section>
-
-	<section id="menu-content">
+	
+	<section class="menu-title">
 		<h2>Pastas</h2>
-
+		<hr class="divider">
+	</section>
+	<section class="menu-content">
 		
 	</section>
 </Layout>
 
 
 <style>
-	#title {
+	#main-title {
 		padding: 10px 1px;
 		text-align: center;
 		margin-bottom: 20px;
 	}
 	
-	#title h1 {
+	#main-title h1 {
 		font-size: var(--font-size-l);
 		color: var(--color-primary);
 		line-height: 1em;
 		font-family: var(--font-family-secondary);
 	}
+
+	.menu-title{
+		margin: 0px 10%;
+		text-align: center;
+	}
 	
+	.menu-title h2{
+		font-size: var(--font-size-m);
+		color: var(--color-black);
+		font-weight: bolder;
+	}
+
 </style>
