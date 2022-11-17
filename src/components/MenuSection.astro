@@ -1,0 +1,92 @@
+---
+
+const menuSection = {
+    title: 'Pastas',
+    content: [
+        {
+            title: 'Pavo Ahumado',
+            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
+            price: {
+                amount: 3100,
+                currency: 'MXN',
+                type: 'Por pieza'
+            }
+        },
+        {
+            title: 'Pavo Ahumado',
+            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
+            price: {
+                amount: 3100,
+                currency: 'MXN',
+                type: 'Por pieza'
+            }
+        },
+        {
+            title: 'Pavo Ahumado',
+            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
+            price: {
+                amount: 3100,
+                currency: 'MXN',
+                type: 'Por pieza'
+            }
+        },
+        {
+            title: 'Pavo Ahumado',
+            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
+            price: {
+                amount: 3100,
+                currency: 'MXN',
+                type: 'Por pieza'
+            }
+        }
+    ]
+}
+---
+
+<section class="menu-section">
+	<div class="menu-section-title">
+		<h2>{menuSection.title}</h2>
+		<hr class="divider">
+	</div>
+	<div class="menu-section-content">
+		<ul>
+            {menuSection.content.map(c => (
+                <li>
+                    <article class="menu-section-item">
+                        <h3>{c.title}</h3>
+                        <p>{c.description}</p>
+
+                        <span>${c.price.amount} {c.price.currency} {c.price.type}</span>
+                    </article>
+                </li>
+            ))}
+        </ul>
+	</div>
+</section>
+
+<style>
+
+    .menu-section {
+
+    }
+    
+
+	.menu-section-title{
+		margin: 0px 10%;
+		text-align: center;
+	}
+	
+	.menu-section-title h2{
+		font-size: var(--font-size-m);
+		color: var(--color-black);
+		font-weight: bolder;
+	}
+
+    .menu-section-content {
+
+    }
+
+    .menu-section-item {
+
+    }
+</style>
