@@ -11,7 +11,7 @@ const { imageName = "" } = Astro.props;
 
 <style define:vars={{ imageUrl: `url('${imageName}')` }}>
   .jumbotron {
-    padding: 125px 1px;
+    padding: 155px 1px;
     width: 100%;
     position: relative;
     margin-bottom: 20px;
@@ -23,5 +23,11 @@ const { imageName = "" } = Astro.props;
     display: flex;
     justify-content: flex-start;
     background-color: rgba(83, 82, 82, 0.6);
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .jumbotron {
+      padding: 125px 1px;
+    }
   }
 </style>
