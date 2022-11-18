@@ -2,66 +2,63 @@
 import MenuItem from "./MenuItem.astro";
 
 interface Props {
-    section: Section;
+  section: Section;
 }
 
 interface Section {
-    title: string;
-    content: any[];
+  title: string;
+  content: any[];
 }
 
-const {section = {title: '', content: []}} = Astro.props;
+const { section = { title: "", content: [] } } = Astro.props;
 ---
 
 <article class="menu-section">
-	<div class="menu-section-title">
-		<h2>{section.title}</h2>
-		<hr>
-	</div>
-	<div class="menu-section-content">
-        { section.content.map(c => (
-            <MenuItem item={c}/>
-        ))}
-	</div>
+  <div class="menu-section-title">
+    <h2>{section.title}</h2>
+    <hr />
+  </div>
+  <div class="menu-section-content">
+    {section.content.map((c) => <MenuItem item={c} />)}
+  </div>
 </article>
 
 <style>
-    .menu-section {
-        margin-top: 50px;
-    }
-    .menu-section-title {
-        text-align: center;
-        margin-bottom: 60px;
-    }
+  .menu-section {
+    margin-top: 50px;
+  }
+  .menu-section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-    .menu-section-title h2 {
-        text-transform: capitalize;
-        font-size: 36px;
-        position: relative;
-        display: inline-block;
-        font-weight: 900;
-    }
+  .menu-section-title h2 {
+    text-transform: capitalize;
+    font-size: 36px;
+    position: relative;
+    display: inline-block;
+    font-weight: 900;
+  }
 
-    .menu-section-title h2 span {
-        display: block;
-        font-size: 18px;
-        font-style: italic;
-        margin-bottom: 5px;
-    }
+  .menu-section-title h2 span {
+    display: block;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
 
-    .menu-section-title hr {
-        width: 120px;
-        height: 2px;
-        text-align: center;
-        background-color: var(--color-third);
-        margin: auto;
-        margin-top: 5px;
-    }
+  .menu-section-title hr {
+    width: 120px;
+    height: 2px;
+    text-align: center;
+    background-color: var(--color-third);
+    margin: auto;
+    margin-top: 5px;
+  }
 
-    .menu-section-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
+  .menu-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 </style>

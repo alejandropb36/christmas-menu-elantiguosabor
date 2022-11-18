@@ -24,7 +24,7 @@ const {
   <img src={item.image} alt="image" />
   <div class="menu-item-content">
     <h3>{item.title} <span>{item.price}</span></h3>
-    <p>{item.description}</p>
+    <p set:html={item.description}></p>
   </div>
 </div>
 
@@ -55,8 +55,11 @@ const {
   .menu-item:hover img {
     border-radius: 0;
   }
+  .menu-item-content {
+    width: 100%;
+  }
 
-  .menu-item h3 {
+  .menu-item-content h3 {
     text-transform: capitalize;
     font-size: 18px;
     border-bottom: 1px dashed var(--color-gray-dark);
@@ -65,7 +68,7 @@ const {
     font-weight: bold;
   }
 
-  .menu-item h3 span {
+  .menu-item-content h3 span {
     float: right;
     color: var(--color-third);
     font-style: italic;
