@@ -5,10 +5,10 @@
 @import './reset.css';
 
 .divider {
-    width: 85px;
-    height: 1px;
+    width: 120px;
+    height: 2px;
     text-align: center;
-    background-color: var(--color-primary);
+    background-color: var(--color-third);
     margin: auto;
-    margin-top: 17px;
+    margin-top: 5px;
 }

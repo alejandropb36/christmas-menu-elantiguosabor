@@ -1,92 +1,67 @@
 ---
+import MenuItem from "./MenuItem.astro";
 
-const menuSection = {
-    title: 'Pastas',
-    content: [
-        {
-            title: 'Pavo Ahumado',
-            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
-            price: {
-                amount: 3100,
-                currency: 'MXN',
-                type: 'Por pieza'
-            }
-        },
-        {
-            title: 'Pavo Ahumado',
-            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
-            price: {
-                amount: 3100,
-                currency: 'MXN',
-                type: 'Por pieza'
-            }
-        },
-        {
-            title: 'Pavo Ahumado',
-            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
-            price: {
-                amount: 3100,
-                currency: 'MXN',
-                type: 'Por pieza'
-            }
-        },
-        {
-            title: 'Pavo Ahumado',
-            description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
-            price: {
-                amount: 3100,
-                currency: 'MXN',
-                type: 'Por pieza'
-            }
-        }
-    ]
+interface Props {
+    section: Section;
 }
+
+interface Section {
+    title: string;
+    content: any[];
+}
+
+const {section = {title: '', content: []}} = Astro.props;
 ---
 
-<section class="menu-section">
+<article class="menu-section">
 	<div class="menu-section-title">
-		<h2>{menuSection.title}</h2>
-		<hr class="divider">
+		<h2>{section.title}</h2>
+		<hr>
 	</div>
 	<div class="menu-section-content">
-		<ul>
-            {menuSection.content.map(c => (
-                <li>
-                    <article class="menu-section-item">
-                        <h3>{c.title}</h3>
-                        <p>{c.description}</p>
-
-                        <span>${c.price.amount} {c.price.currency} {c.price.type}</span>
-                    </article>
-                </li>
-            ))}
-        </ul>
+        { section.content.map(c => (
+            <MenuItem item={c}/>
+        ))}
 	</div>
-</section>
+</article>
 
 <style>
-
     .menu-section {
-
+        margin-top: 50px;
     }
-    
+    .menu-section-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
-	.menu-section-title{
-		margin: 0px 10%;
-		text-align: center;
-	}
-	
-	.menu-section-title h2{
-		font-size: var(--font-size-m);
-		color: var(--color-black);
-		font-weight: bolder;
-	}
+    .menu-section-title h2 {
+        text-transform: capitalize;
+        font-size: 36px;
+        position: relative;
+        display: inline-block;
+        font-weight: 900;
+    }
+
+    .menu-section-title h2 span {
+        display: block;
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+
+    .menu-section-title hr {
+        width: 120px;
+        height: 2px;
+        text-align: center;
+        background-color: var(--color-third);
+        margin: auto;
+        margin-top: 5px;
+    }
 
     .menu-section-content {
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-
-    .menu-section-item {
-
-    }
+    
 </style>
