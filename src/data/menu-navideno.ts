@@ -106,6 +106,12 @@ export const menuData = {
                     image: '/img/pastas/lasagna.jpg'
                 },
                 {
+                    title: 'Alfredo',
+                    description: 'Pasta Alfredoo.',
+                    price: '$220 p/kilo',
+                    image: '/img/pastas/alfredo.jpg'
+                },
+                {
                     title: 'Con camarones',
                     description: 'Pasta con camarones.',
                     price: '$350 p/kilo',
@@ -116,12 +122,6 @@ export const menuData = {
                     description: 'Pasta con jamón serrano.',
                     price: '$350 p/kilo',
                     image: '/img/pastas/pasta-jamon-serrano.jpg'
-                },
-                {
-                    title: 'Alfredo',
-                    description: 'Pasta Alfredoo.',
-                    price: '$220 p/kilo',
-                    image: '/img/pastas/alfredo.jpg'
                 },
                 {
                     title: 'Al gusto',
