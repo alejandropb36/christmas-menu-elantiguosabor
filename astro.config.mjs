@@ -2,6 +2,5 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://alejandropb36.github.io/",
-  base: "/christmas-menu-elantiguosabor",
+  site: "https://navidad.elantiguosabor.com",
 });
