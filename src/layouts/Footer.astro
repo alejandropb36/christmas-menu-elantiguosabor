@@ -1,36 +1,23 @@
 ---
-import "./Footer.css";
+import ContactBtns from "../components/ContactBtns.astro";
+
 const year = new Date();
 ---
 
 <!-- Footer -->
 <footer>
-  <div id="footer-content">
+  <ContactBtns/>
+  <!-- <div id="footer-content">
     <p>
       El antiguo sabor &copy; {year.getFullYear()}. by
-      <!-- <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="mr-1"/> -->
       <a
         rel="noreferrer"
         href="https://www.linkedin.com/in/luis-alejandro-ponce-brizuela-22a994166/"
         target="_blank">Alejandro Ponce</a
       >
     </p>
-  </div>
+  </div> -->
 </footer>
 
-<style lang="scss">
-  footer {
-    background: #f3f3f3;
-    width: 100vw;
-    height: 70px;
-    position: absolute !important;
-    box-shadow: 0 -5px 5px -5px #333;
-    color: #333;
-    align-content: center;
-    text-align: center;
-    bottom: 0 !important;
-  }
-  #footer-content {
-    padding: 18px;
-  }
+<style>
 </style>
