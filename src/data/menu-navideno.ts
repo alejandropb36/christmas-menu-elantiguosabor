@@ -78,8 +78,8 @@ export const menuData = {
                     image: '/img/ensaladas/ensalada-manzana.jpg'
                 },
                 {
-                    title: 'Betabel con nranja y nuez',
-                    description: '',
+                    title: 'Betabel',
+                    description: 'Betabel con naranja y nuez',
                     price: '$280 p/litro',
                     image: '/img/ensaladas/ensalada-betabel.jpg'
                 },
