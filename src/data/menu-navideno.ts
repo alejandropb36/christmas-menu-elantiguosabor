@@ -65,7 +65,7 @@ export const menuData = {
             ]
         },
         {
-            title: 'Ensaldas',
+            title: 'Ensaladas',
             content: [
                 {
                     title: 'Frutas',
