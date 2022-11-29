@@ -6,13 +6,15 @@ export const menuData = {
             content: [
                 {
                     title: 'Pavo Natural',
-                    description: 'Pavo natural glaseado con mermelada de chabacano o arandano',
+                    description: `<ul> <li>Glaseado de: Manzana, Durazno, Chabacano o Mantequilla./li>
+                    <li>Rellenos de: Pan, Frutas o Carne./li></ul>`,
                     price: '$3,000 p/pieza',
                     image: '/img/pavos/pavo.jpg'
                 },
                 {
                     title: 'Pavo Ahumado',
-                    description: 'Pavo ahumado glaseado con mermelada de chabacano o arandano',
+                    description: `<ul> <li>Glaseado de: Manzana, Durazno, Chabacano o Mantequilla./li>
+                    <li>Rellenos de: Pan, Frutas o Carne./li></ul>`,
                     price: '$3,100 p/pieza',
                     image: '/img/pavos/pavo.jpg'
                 },
