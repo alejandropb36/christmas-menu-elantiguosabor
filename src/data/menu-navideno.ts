@@ -46,13 +46,13 @@ export const menuData = {
                 {
                     title: 'Filete Miñon',
                     description: '',
-                    price: '$1000 p/kilo',
+                    price: '$1,000 p/kilo',
                     image: '/img/carnes/filete-mignon.jpg'
                 },
                 {
                     title: 'Filete al vino',
                     description: '',
-                    price: '$1000 p/kilo',
+                    price: '$1,000 p/kilo',
                     image: '/img/carnes/filete-vino.jpg'
                 },
                 {
