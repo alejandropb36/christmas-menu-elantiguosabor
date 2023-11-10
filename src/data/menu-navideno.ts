@@ -1,5 +1,5 @@
 export const menuData = {
-    year: '2022',
+    year: '2023',
     sections: [
         {
             title: 'Pavos',
@@ -8,14 +8,14 @@ export const menuData = {
                     title: 'Pavo Natural',
                     description: `<ul> <li>Glaseado de: Manzana, Durazno, Chabacano o Mantequilla.</li>
                     <li>Relleno de: Pan, Frutas o Carne.</li></ul>`,
-                    price: '$3,000 p/pieza',
+                    price: '$3,100 p/pieza',
                     image: '/img/pavos/pavo.jpg'
                 },
                 {
                     title: 'Pavo Ahumado',
                     description: `<ul> <li>Glaseado de: Manzana, Durazno, Chabacano o Mantequilla.</li>
                     <li>Relleno de: Pan, Frutas o Carne.</li></ul>`,
-                    price: '$3,100 p/pieza',
+                    price: '$3,200 p/pieza',
                     image: '/img/pavos/pavo.jpg'
                 },
                 {
@@ -33,32 +33,32 @@ export const menuData = {
                     title: 'Pierna',
                     description: `<ul> <li>Mechadas</li> <li>Al vino</li> <li>A la ciruela</li>
                     <li>Al chipotle</li> <li>Campiñones</li> </ul>`,
-                    price: '$580 p/kilo',
+                    price: '$600 p/kilo',
                     image: '/img/carnes/pierna-navidena.jpg'
                 },
                 {
                     title: 'Lomo',
-                    description: `<ul> <li>Relleno</li> <li>Mechado</li> <li>A la ciruela</li>
+                    description: `<ul> <li>Relleno</li> <li>Mechado a los 3 chiles</li> <li>A la ciruela</li>
                     <li>Al chipotle</li> <li>Al vino</li> </ul>`,
-                    price: '$600 p/kilo',
+                    price: '$650 p/kilo',
                     image: '/img/carnes/lomo-navideno.jpg'
                 },
                 {
                     title: 'Filete Miñon',
                     description: '',
-                    price: '$900 p/kilo',
+                    price: '$1000 p/kilo',
                     image: '/img/carnes/filete-mignon.jpg'
                 },
                 {
                     title: 'Filete al vino',
                     description: '',
-                    price: '$900 p/kilo',
+                    price: '$1000 p/kilo',
                     image: '/img/carnes/filete-vino.jpg'
                 },
                 {
                     title: 'Filete wellington',
                     description: '',
-                    price: '$1,200 p/kilo',
+                    price: '$1,500 p/kilo',
                     image: '/img/carnes/filete-wellington.jpg'
                 },
                 
@@ -104,7 +104,7 @@ export const menuData = {
                 {
                     title: 'Lasagna',
                     description: 'Lasagna para 12 personas.',
-                    price: '$1,400 p/pieza',
+                    price: '$1,500 p/pieza',
                     image: '/img/pastas/lasagna.jpg'
                 },
                 {
