@@ -138,7 +138,7 @@ export const menuData = {
             content: [
                 {
                     title: 'Champiñones',
-                    description: 'Crema de campiñones',
+                    description: 'Crema de champiñones',
                     price: '$200 p/litro',
                     image: '/img/cremas/crema-champinones.jpg'
                 },
